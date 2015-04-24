@@ -25,3 +25,20 @@ toto.age = 21
 puts "#{toto.name.capitalize} #{toto.age}"
 toto.name = "tutu"
 puts "#{toto.name.capitalize} #{toto.age}"
+
+puts toto.respond_to? "name"
+puts toto.respond_to? "coucou"
+
+
+#toto.coucou       coucou n'existe pas
+
+toto.coucou if toto.respond_to? "coucou"
+
+class Character
+  def coucou
+    puts "coucou"
+  end
+end
+puts toto.respond_to? "coucou"
+
+toto.coucou if toto.respond_to? "coucou"
