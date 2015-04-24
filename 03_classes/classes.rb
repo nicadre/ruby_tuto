@@ -42,3 +42,20 @@ end
 puts toto.respond_to? "coucou"
 
 toto.coucou if toto.respond_to? "coucou"
+
+
+class Character
+  def ==(other)
+    self.class === other and
+      other.name == @name and
+      other.age == @age
+  end
+
+  alias eql? ==
+end
+
+tutu = Character.new toto.name, toto.age
+tata = Character.new "totu", 42
+
+puts toto == tutu
+puts toto.eql? tata
