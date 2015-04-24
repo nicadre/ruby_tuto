@@ -8,6 +8,10 @@ def tutu(arg)
   puts "tutu #{arg}"
 end
 
+def tata(arg = "tata")
+  puts "tata #{arg}"
+end
+
 def add_one(i)
   i + 1 # une fonction return automatiquement la valeur de la derniere ligne
 end
@@ -21,6 +25,8 @@ toto # appel de toto
 
 tutu 42 # tutu aavec un int
 tutu "coucou" #tutu avec un string
+tata "coucou"
+tata
 
 # les parenthes sont implicites, il faut les rajouter si tu as des fonctions imbriquer
 
