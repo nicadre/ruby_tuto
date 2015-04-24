@@ -9,4 +9,10 @@ options = { font_size: 10, font_family: "Arial" }
 
 puts options[:font_family]
 
+grades.each do |k, v|
+  puts "#{k} = #{v}"
+end
 
+options.each do |k, v|
+  puts "#{k} = #{v}"
+end
